@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* { margin:0; padding:0; }
+li { list-style:none; }
+a { text-decoration: none; color:#111; display:block;  font-family: 'NanumSquareNeo-Variable'; white-space: nowrap; }
+img { width:100%; }
+
+/* body에 가로 스크롤 없앰 */
+html, body { overflow-x: hidden; }
+
+body { font-family: 'NanumSquareNeo-Variable'; }
+
+header, section, footer { width:100%; float:left; }
+header, section, footer , div { box-sizing: border-box; }
+
+.wrap { width:100%; }
+.center_box { width:1280px; margin:0 auto; }
+header { height:140px; border-bottom:1px solid #ddd; position: relative; z-index:100; }
+header .top_area { height:36px; margin-right:15px; margin-top: 10px; }
+header .top_area .top_menu { float:right; }
+header .top_area .top_menu ul li { float:left; margin:15px 5px; }
+header .top_area .top_menu ul li:after { content:"|"; float:right; margin-left:10px; font-size:13px; color:#ddd; }
+header .top_area .top_menu ul li:last-child:after { content:""; }
+header .top_area .top_menu ul li a { font-size:13px; float:left; }
+header .bottom_area { margin-top:27px; }
+header .bottom_area .logo { float:left; width:150px; margin-left:30px; }
+header .bottom_area nav {
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:990px;
+}
+header .bottom_area nav > ul > li { float:left; position: relative; }
+header .bottom_area nav > ul > li > a { padding:7px 40px; font-size:18px; font-weight: bold; padding-bottom:20px; }
+header .bottom_area nav > ul > li:hover > a { color:#1ada13; }
+header .bottom_area nav ul li:hover .sub { display: block; }
+header .bottom_area nav .sub {
+    padding:20px; border-radius: 20px; background-color: #1ada13; 
+    position:absolute; left:50%; transform:translateX(-50%);
+    display: none;
+}
+header .bottom_area nav .sub li a {
+    font-size: 15px; color:#fff; padding:7px;
+}
+header .bottom_area nav .sub li a:hover {
+    text-decoration:underline; text-underline-offset : 7px;
+}
+
+header .bottom_area .right_menu { float:right; margin-right: 30px;}
+header .bottom_area .right_menu > div { float:left; }
+header .bottom_area .right_menu .lang { width:40px; margin-right:40px; margin-top:10px; }
+header .bottom_area .right_menu .lang a { font-weight: bold; font-size: 14px;
+}
+header .bottom_area .right_menu .lang span { width:12px; display: block; float:right; margin-top:3px; }
+
+header .bottom_area .right_menu .lang .lang_sub {
+    padding:20px;
+    border-radius: 20px;
+    background-color: #111;
+    margin-top: 10px;
+    width:64px;
+    margin-left:-15px;
+    text-align: center;
+    display: none;
+}
+header .bottom_area .right_menu .lang .lang_sub li a {
+    color:#aaa;
+    padding:5px 0;
+    font-weight: bold;
+}
+header .bottom_area .right_menu .lang .lang_sub li a.active {
+    color:#fff;
+}
+
+
+
+
+/* 햄버거 메뉴 */
+header .bottom_area .right_menu .ham_menu { width:24px; margin-top: 5px; }
+
+/* section */
+section .visual { width:1280px; height:240px; margin:0 auto;
+padding:40px 0; }
+section .visual .vis_title { float:left; padding-top:40px; }
+section .visual .vis_title h1 { font-size:34px; }
+section .visual .vis_title p { margin-top: 20px; font-size:20px; }
+section .visual .vis_title b { display:block; margin-top: 30px; line-height:60px; font-size:20px; }
+section .visual .vis_title b i { font-style:normal; float:left; margin-right: 15px; }
+section .visual .vis_title b span { display:block; width:24px; float:left; margin-top: 5px;}
+section .visual .vis_img { float:right; width:380px; }
+
+section .visual_slide {
+    margin-top: 40px;
+    height:400px; /*background-color: #ddd;*/
+    width:100%; float:left; text-align: center;
+}
+
+section .visual_slide .swiper {
+    overflow:visible;    /*hidden의 반대*/
+}
+
+
+/* swiper slide button - 슬라이드 오른쪽 버튼*/
+section .visual_slide .swiper-button-next {
+    right:590px;
+    background-image:url(../img/next_arrow.png);
+    width:60px; height:60px;
+    background-size: cover;
+}
+section .visual_slide .swiper-button-next:after {
+    content:"";    
+}
+/* swiper slide button - 슬라이드 왼쪽 버튼 */
+section .visual_slide .swiper-button-prev {
+    left:590px;
+    background-image:url(../img/prev_arrow.png);
+    width:60px; height:60px;
+    background-size: cover;
+}
+section .visual_slide .swiper-button-prev:after {
+    content:"";    
+}
+
+/* swiper slide pagination - 슬라이드 동그란 버튼 */
+section .visual_slide .swiper-pagination {
+    bottom:-40px;
+}
+section .visual_slide .swiper-pagination-bullet {
+    width:14px; height:14px;
+}
+section .visual_slide .swiper-pagination-bullet-active {
+    background-color: #1ada13;
+}
+
+
+
+/* footer */
+footer { width:100%; padding:80px 0; background-color: #f0f0f0;}
+
+footer .center_box .f_left { float:left; }
+footer .center_box .f_right { float:right; }
+
+footer .center_box .f_left .f_logo { width:130px; margin-bottom: 30px; }
+footer .center_box .f_left address { font-style:normal; color:#666; font-size:14px; line-height: 22px; font-weight: bold; }
+
+footer .center_box .f_left .sns { margin-top: 30px; }
+footer .center_box .f_left .sns ul li { width:30px; float:left; margin-right:15px; }
+
+footer .center_box .f_right div { float:left; margin-left:50px; }
+footer .center_box .f_right div ul { float:left; padding-right:60px; }
+footer .center_box .f_right div h3 { color:#1ada13; font-size:14px; margin-bottom: 30px;}
+footer .center_box .f_right div ul li a { padding:7px 0; font-size:14px; color:#666;}
+
+/* 개인정보처리방침 진하게 */
+footer .center_box .f_right .quick_menu ul:nth-child(2) li:nth-child(3) a { font-weight: bold; color:#111; }
+
+/* 햄버거 메뉴를 클릭하면 나타나는 팝업 메뉴 */
+.popup {
+    display: none;
+    position: absolute;
+    z-index:1000;
+    width:100%;
+    height:100%;
+    border-top:6px solid #1ada13;
+    background-color:#fff;
+    box-sizing: border-box;
+    padding:30px;
+}
+.popup .close_btn {
+    width:60px;
+    float:right;
+}
+.popup > ul {
+    padding:80px 200px;
+}
+.popup > ul > li { 
+    display:inline-table;   /*행, 열 기준으로 정렬*/
+    margin: 30px 60px;
+    width:200px;
+}
+.popup > ul > li > a {
+    font-size: 38px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+.popup ul li ul li a {
+    padding:10px 0;
+    font-size:20px;
+    font-weight: bold;
+    color:#666;
+}
+
+/* top버튼 */
+.top {
+    position: fixed;
+    bottom:20px;
+    right:20px;
+    border-radius: 100%;
+    background-color: #1ada13;
+    text-align: center;
+    width:60px;
+    height:60px;
+    color:#fff;
+    line-height: 60px;
+    font-size: 13px;
+    cursor: pointer;
+    z-index: 500;
+}
